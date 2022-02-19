@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind css link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Money-Master</title>
+</head>
+<body>
+    <!-- hader of the page -->
+    <header class="text-4xl mt-12 text-center">
+        <h1>Monthly Expenses <span class="text-lime-400">Calculations</span></h1>
+    </header>
+    <!-- section starts here -->
+    <section class="mx-auto my-10 w-3/4">
+        <!-- use grid to split 2 side  -->
+        <div class="grid grid-cols-7  gap-4">
+            <!-- image is the left aside -->
+            <div class="col-span-7 md:col-span-4 sm:col-span-7 ">
+                <img class="w-full h-full" src="image/money-canada.jpg" alt="">
+            </div>
+            <!-- calculation part right aside  -->
+            <div class="col-span-7 md:col-span-3 sm:col-span-7 bg-lime-100 p-8">
+                <div class="mx-auto">
+                    <!-- first part input  -->
+                    <div class="income-input">
+                        <h4 class="text-2xl text-center mb-2">Income</h4>
+                        <div class="flex items-baseline ">
+                            <p class="text-xl">income :</p>
+                            <input id="income-input" class=" px-2 mb-2 rounded" type="text" placeholder="input">
+                        </div>
+                    </div>
+                    <!-- second part input  -->
+                    <div class="Expenses-input">
+                        <h4 class="text-2xl text-center mb-4">Expenses</h4>
+                        <div class="flex">
+                            <p class="text-xl">food :</p>
+                           <input id="food-input" class="rounded px-2 mb-2" type="text" placeholder="input">
+                        </div>
+                        <div class="flex items-baseline">
+                            <p class="text-xl">rent :</p>
+                           <input id="rent-input" class="rounded px-2 mb-2" type="text" placeholder="input">
+                        </div>
+                        </div>
+                        <div class="flex items-baseline">
+                            <p class="text-xl">clothes :</p>
+                           <input id="cloth-input" class="rounded px-2 mb-2" type="text" placeholder="input">
+                        </div>
+                        <!-- button to calculate  -->
+                        <div class="flex items-baseline m-2">
+                            <button id="calculate-button" class="w-3/4 bg-lime-400 text-white rounded p-2 mx-auto text-xl">Calculate</button>
+                        </div>
+                        <!-- total  part -->
+                        <div id="expence-balance">
+                            <h4 class="text-xl text-center m-2">Total Expense: <span id="total-expense">0</span></h4>
+                            <h4 class="text-xl text-center mb-2">Balance: <span id="total-balance">0</span></h4>
+                        </div>
+                        <div class="flex items-baseline text-2xl">
+                            <p class="">Save :</p>
+                           <input id="percentage-input" class="rounded px-2 mb-2 w-1/4" type="text" placeholder="input">
+                           <p>%</p>
+                           <button id="save-button" class="bg-yellow-300 px-3 rounded">save</button>
+                        </div>
+                        <div id="last-part">
+                            <h4 class="text-xl text-center m-2">Saving Amount: <span id="saving-amount">0</span></h4>
+                            <h4 class="text-xl text-center mb-2">Remainning Balance: <span id="remainning-balance">0</span></h4>
+                        </div>
+
+                        <!-- error throw msg  -->
+                        <p id="input-error" class="text-xl bg-red-300 p-3 rounded mb-2 hidden">Please input a Integer Number</p>
+                        <p id="negetive-error" class="text-xl bg-yellow-300 p-3 rounded mb-2 hidden">Please input positive Number in every input field</p>
+                        <p id="cost-error" class="text-xl bg-blue-300 p-3 rounded hidden">Your Expenses can not greater then your Salary</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- connect javaScript with html  -->
+    <script src="js/calculation.js"></script>
+</body>
+</html>
