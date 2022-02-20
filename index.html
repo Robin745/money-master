@@ -8,13 +8,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Money-Master</title>
 </head>
-<body>
+<body class="mx-auto w-full md:w-3/4">
     <!-- hader of the page -->
-    <header class="text-4xl mt-12 text-center">
+    <header class="text-2xl md:text-3xl lg:text-4xl mt-12 text-center">
         <h1>Monthly Expenses <span class="text-lime-400">Calculations</span></h1>
     </header>
     <!-- section starts here -->
-    <section class="mx-auto my-10 w-3/4">
+    <section class="my-10">
         <!-- use grid to split 2 side  -->
         <div class="grid grid-cols-7  gap-4">
             <!-- image is the left aside -->
@@ -23,7 +23,7 @@
             </div>
             <!-- calculation part right aside  -->
             <div class="col-span-7 md:col-span-3 sm:col-span-7 bg-lime-100 p-8">
-                <div class="mx-auto">
+                <div class="w-full">
                     <!-- first part input  -->
                     <div class="income-input">
                         <h4 class="text-2xl text-center mb-2">Income</h4>
@@ -34,8 +34,8 @@
                     </div>
                     <!-- second part input  -->
                     <div class="Expenses-input">
-                        <h4 class="text-2xl text-center mb-4">Expenses</h4>
-                        <div class="flex">
+                        <h4 class="text-center mb-4 text-2xl">Expenses</h4>
+                        <div class="flex items-baseline">
                             <p class="text-xl">food :</p>
                            <input id="food-input" class="rounded px-2 mb-2" type="text" placeholder="input">
                         </div>
@@ -57,7 +57,7 @@
                             <h4 class="text-xl text-center m-2">Total Expense: <span class="text-blue-600" id="total-expense">0</span></h4>
                             <h4 class="text-xl text-center mb-2">Balance: <span class="text-rose-600" id="total-balance">0</span></h4>
                         </div>
-                        <div class="flex items-baseline text-2xl">
+                        <div class="flex items-baseline md:text-2xl">
                             <p class="">Save :</p>
                            <input id="percentage-input" class="rounded px-2 mb-2 w-1/4" type="text" placeholder="input">
                            <p>%</p>
